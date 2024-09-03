@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <a class="navbar-brand" href="#">Grocery Store Admin</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Client View</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <h1>Admin Panel</h1>
+        <div id="adminActions" class="list-group">
+            <a href="#" class="list-group-item list-group-item-action" onclick="showAddItemForm()">Add New Item</a>
+            <a href="#" class="list-group-item list-group-item-action" onclick="showAllItems()">Show All Items</a>
+            <a href="#" class="list-group-item list-group-item-action" onclick="showEditItems()">Edit Item</a>
+            <a href="#" class="list-group-item list-group-item-action" onclick="showTotalSales()">Total Sales</a>
+            <a href="#" class="list-group-item list-group-item-action" onclick="showDeleteItems()">Delete Items</a>
+            <a href="#" class="list-group-item list-group-item-action" onclick="showCustomerDetails()">Customer Details</a>
+        </div>
+        <div id="adminContent" class="mt-4">
+            <!-- Admin content will be displayed here -->
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>copyright &copy;2024 - Prathamesh. All rights reserved</p>
+    </footer>
+
+    <!-- Login Modal -->
+    <div class="modal" id="loginModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Admin Login</h5>
+                </div>
+                <div class="modal-body">
+                    <form id="loginForm">
+                        <div class="form-group">
+                            <label for="adminUsername">Username</label>
+                            <input type="text" class="form-control" id="adminUsername" autocomplete="off" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="adminPassword">Password</label>
+                            <input type="password" class="form-control" id="adminPassword" autocomplete="off" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Login</button>
+                    </form>
+                    <div id="loginError" class="text-danger mt-2" style="display: none;">Username or password is incorrect. Try again.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.3.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
